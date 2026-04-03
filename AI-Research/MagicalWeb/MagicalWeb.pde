@@ -24,7 +24,6 @@ void setup() {
     float y = SPHERE_RADIUS * sin(phi) * sin(theta);
     float z = SPHERE_RADIUS * cos(phi);
     
-    // Pass the calculated 3D coordinate directly into our PVector
     particles.add(new Particle(new PVector(x, y, z)));
   }
 }
@@ -47,9 +46,10 @@ void draw() {
   }
 
   // 2. Draw connections between close particles
+  strokeWeight(1);
   for (int i = 0; i < particles.size(); i++) {
     Particle p1 = particles.get(i);
-    
+
     for (int j = i + 1; j < particles.size(); j++) {
       Particle p2 = particles.get(j);
       float d = PVector.dist(p1.pos, p2.pos);
@@ -57,8 +57,6 @@ void draw() {
       if (d < CONNECTION_DIST) {
         float alpha = map(d, 0, CONNECTION_DIST, 60, 0);
         float avgHue = calculateAverageHue(p1.hueValue, p2.hueValue);
-        
-        strokeWeight(1);
         stroke(avgHue, 35, 90, alpha);
         line(p1.pos.x, p1.pos.y, p1.pos.z, p2.pos.x, p2.pos.y, p2.pos.z);
       }
@@ -70,10 +68,7 @@ void draw() {
 float calculateAverageHue(float h1, float h2) {
   float diff = abs(h1 - h2);
   float avg = (h1 + h2) / 2.0;
-  // If the colors span across the 360/0 degree line, bridge the gap properly
-  if (diff > 180) {
-    avg = (avg + 180) % 360;
-  }
+  if (diff > 180) avg = (avg + 180) % 360;
   return avg;
 }
 
@@ -85,7 +80,7 @@ class Particle {
   Particle(PVector startPos) {
     basePos = startPos.copy();
     pos = startPos.copy();
-    vel = new PVector(0, 0, 0);
+    vel = new PVector();
     hueValue = random(360);
     noiseOffset = random(1000);
   }

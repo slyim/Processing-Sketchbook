@@ -1,20 +1,17 @@
-// bu statik modda bir programdir
+// Soldan sağa hareket eden kırmızı dikdörtgen.
 
-/*
-size(400, 400);
- background(0);
- fill(154, 0, 54, 100);
- rect(100, 100, 200, 200);
- */
+int x = 0; // Başlangıç x konumu
 
-// active mod
 void setup() {
-  size(400, 200);
-  background(0);
+  size(400, 400);
+  background(200);
   fill(#D31E1E);
   noStroke();
+  frameRate(20);
 }
 
 void draw() {
-  rect(0, 150, 50, 20);
+  background(200);
+  rect(x, 150, 50, 20); // Dikdörtgeni çiz
+  x += 4;               // Her karede 4 piksel sağa kayar
 }

@@ -1,0 +1,6 @@
+{
+  "files.associations": {
+    "*.pde": "Processing"
+  },
+  "java.autobuild.enabled": false
+}

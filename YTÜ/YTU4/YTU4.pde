@@ -1,20 +1,18 @@
-int y = 0;
+// Fare konumuna her karede rastgele renkli daireler çizer.
 
 void setup() {
-  size(800, 400);
+  size(400, 400);
+  background(50);
+  noStroke();
+  fill(50);
 }
 
 void draw() {
-  line(0, y, 800, y);
-  strokeWeight(20);
-  if (y <= 100) {
-    stroke(#422344);
-  } else if (y>100 && y<=200) {
-    stroke(#994422);
-  } else if (y>=200 && y<=300) {
-    stroke(#ffff22);
-  } else {
-    stroke(#779922);
-  }
-  y+=8;
+  // Her karede rastgele RGBA renk üret
+  float R = random(0, 255);
+  float G = random(0, 255);
+  float B = random(0, 255);
+  float A = random(0, 255); // Alfa (şeffaflık)
+  fill(R, G, B, A);
+  circle(mouseX, mouseY, 75); // Fare konumuna daire çiz
 }

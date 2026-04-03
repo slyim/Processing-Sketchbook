@@ -1,30 +1,23 @@
-// bouncing ball
+// Çapraz hareketle ekranda ilerleyen, konsola konum yazan daire.
 
-int y;
-int hareket;
-
-
+float circleX;
+float circleY;
 
 void setup() {
-  size(300, 200);
-  noStroke();
-  fill(200, 100, 50);
-  background(50);
-  y = 25;
-  hareket = 1;
+  size(640, 360);
+  circleX = 320; // Başlangıç merkezi
+  circleY = 180;
+  println("Hello uwu");
 }
 
 void draw() {
+  background(0);
+  println(circleX); // Her karede x konumunu konsola yaz
 
-  background(50);
+  noStroke();
+  fill(255);
+  circle(circleX, circleY, 50);
 
-  circle(width / 2, y, 50);
-  y = y+hareket;
-
-
-  if (y<=25) {
-    hareket = 1;
-  } else if (y == 175) {
-    hareket = -1;
-  }
+  circleX += 5; // Sağa doğru hareket
+  circleY += 2; // Aşağıya doğru hareket
 }

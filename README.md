@@ -1,51 +1,40 @@
-# 🌌 Processing Taslak Defteri (Processing Sketchbook)
+# Processing Taslak Defteri
 
-**Processing (Java)** ile oluşturulmuş yüksek performanslı üretken sistemler ve görsel deneyler koleksiyonu. Bu çalışma alanı, standart Processing IDE'sinin ötesine geçerek profesyonel bir **VS Code** geliştirme iş akışı için optimize edilmiştir.
+Üniversitedeki Processing derslerinde visual coding öğrenme sürecimde ve kişisel projelerimde yaptığım Processing (Java) çizimlerinin koleksiyonu.
 
-## 📂 Proje Mimarisi
+## Klasör Yapısı
 
-Depo, temiz bir geliştirme hattı sağlamak için proje kaynağına ve render moduna göre düzenlenmiştir:
+- **`LilacSketchbook`** — Kendi geliştirdiğim kişisel projeler.
+- **`AI-Research`** — Yapay zeka desteğiyle geliştirilen deneysel projeler.
+- **`YTÜ`** — Üniversite dersi ödevleri ve egzersizleri.
+- **`CodingTrain`** — Coding Train eğitim videolarını takip ederken yaptığım çalışmalar.
+- **`2D`** — P2D ile 2D grafik denemeleri.
+- **`3D`** — P3D renderer ile 3D denemeler.
+- **`Pride 🏳️‍⚧️`** — Pride Çizimleri
+- **`OtherDevs`** — Arkadaşlarıma ait kodlar.
 
-- **`LilacSketchbook`**: Temel orijinal projeler ve tescilli üretken sistemler. Yaratıcı kodlama çalışmalarımın ana merkezidir.
-- **`AI-Research`**: Karmaşık geometriyi, özyinelemeli (recursive) mantığı ve ajan tabanlı iş akışlarını keşfetmek için yapay zeka desteğiyle geliştirilen iş birlikçi deneyler.
-- **`2D`**: İki boyutlu vektör matematiği, fizik tabanlı hareket ve biyolüminesans estetiği üzerine çalışmalar.
-- **`3D`**: P3D işleme (rendering), özel koordinat sistemleri ve GLSL shader entegrasyonu keşifleri.
+## Öğrenme
 
-## 🛠️ Ortam ve İş Akışı
+- Kendi yazdığım kodları son haline geldikten sonra Claude ile dokümentasyon haline getirdim, her bir kod dosyasının ne işe yaradığını içerisindeki yorumlara bakarak öğrenebilirsiniz.
 
-Bu depo, daha sağlam bir geliştirme deneyimi için özel olarak **Visual Studio Code** için yapılandırılmıştır:
+## Nasıl Çalıştırılır?
 
-- **Motor:** Processing 4.x (Java)
-- **Eklenti:** VS Code üzerinden Processing Foundation tarafından yayınlanan **"Processing Language"** eklentisini kurmanız gerekmektedir.
-- **İşleme:** `pixelDensity(2)` ile yüksek çözünürlüklü (High-DPI / Retina) ekranlar için optimize edilmiştir.
-- **Kısayollar:** Eklenti kurulduktan sonra herhangi bir `.pde` dosyasını anında çalıştırmak için `Cmd + Shift + B` (macOS) veya `Ctrl + Shift + B` (Windows) kullanabilirsiniz.
+- Processing kodunu çalıştırmak için sisteminizde **[Processing 4](https://processing.org/download)** kurulu olmalıdır.
+- Önemli: Processing dosyalarında klasör ismi ile sketch.pde aynı olmalıdır, örn. "Sketch/Sketch.pde"
 
-## ✨ Yaratıcı Yön
+### Visual Studio Code (Önerilen)
 
-Çalışmalarım, **organik "büyülü" estetik** ile **katı teknik mantığın** kesişimine odaklanır.
+1. VS Code Eklentiler sekmesinden **Processing Language** eklentisini kurun.
+2. Bu klasörü VS Code'da açın.
+3. Herhangi bir `.pde` dosyasını açıp sağ üstte bulunan mavi ok şeklindeki **Run** butonuna tıklayın veya ctrl/cmd + r kısayolunu kullanın.
 
-- **Ana Temalar:** Özyinelemeli geometri, ruhani parıltılar ve sıvı benzeri hareketler.
-- **Teknik Odak:** `LilacSketchbook` projeleri dahilinde özel raster işleme sistemleri ve modüler sınıflar geliştirmek.
+### Processing IDE
 
----
+1. Processing IDE'yi açın.
+2. `File > Open` ile çalıştırmak istediğiniz `.pde` dosyasını seçin.
 
-### 🚀 Nasıl Çalıştırılır?
-
-Bu çizimleri (sketches) çalıştırabilmek için sisteminizde **Processing 4**'ün yüklü olduğundan emin olun.
-
-#### Yöntem 1: Visual Studio Code (Önerilen)
-
-1. VS Code içerisinde eklentiler (Extensions) sekmesine gidin ve **Processing Language** eklentisini kurun.
-2. Bu ana klasörü VS Code'da açın.
-3. Herhangi bir `.pde` dosyasını açın ve sağ üstteki **Run** simgesine tıklayın veya derleme kısayolunu kullanın.
-
-#### Yöntem 2: Processing IDE
-
-1. **Processing IDE**'yi açın.
-2. `File > Open` yolunu izleyerek çalıştırmak istediğiniz projenin klasörüne gidin ve `.pde` dosyasını seçin.
-
-> **⚠️ Dosya Yapısı Uyarısı:**
-> Processing kuralları gereği, ana `.pde` dosyasının adı ile içinde bulunduğu klasörün adı **birebir aynı** olmalıdır (Örn: `LilacSketchbook/ParlayanKanatlar/ParlayanKanatlar.pde`). Eğer dosyayı yeniden adlandırırsanız, klasörü de değiştirmeyi unutmayın, aksi takdirde proje çalışmaz.
+> **Not:** Processing kuralına göre `.pde` dosyasının adı ile klasörünün adı aynı olmalıdır.
+> Örnek: `JumpingRect/JumpingRect.pde`
 
 ---
 

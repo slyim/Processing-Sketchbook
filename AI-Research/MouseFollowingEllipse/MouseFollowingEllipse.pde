@@ -1,6 +1,5 @@
 void setup () {
   size(600, 600);
-  smooth();
 }
 
 void draw () {
@@ -11,7 +10,6 @@ void draw () {
   noStroke();
   ellipse(mouseX, mouseY, 40, 40);
 
-  // Optional: draw a cursor target indicator
   stroke(0);
   noFill();
   ellipse(mouseX, mouseY, 60, 60);
