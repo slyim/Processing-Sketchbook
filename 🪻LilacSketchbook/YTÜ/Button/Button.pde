@@ -7,27 +7,22 @@ void setup() {
   size(400, 400);
   rectMode(CENTER);
   noStroke();
-  fill(#888a9b); // Başlangıç dolgu rengi
 }
 
 void draw() {
   background(backgroundColor);
-  rect(width/2, height/2, height/2, height/4, 20); // Yuvarlak köşeli düğme
-
-  // Fare düğme üzerindeyken ve basılıyken durumu değiştir
-  if (mouseX > width/2 - height/4 && mouseX < width/2 + height/4 &&
-      mouseY > height/2 - height/8 && mouseY < height/2 + height/8) {
-    if (mousePressed) {
-      buttonState = !buttonState;
-    }
+  if (buttonState) {
+    fill(#eff2ff); // Açık renk
+  } else {
+    fill(#888a9b); // Kapalı renk
   }
+  rect(width/2, height/2, height/2, height/4, 20); // Yuvarlak köşeli düğme
 }
 
-// Durum değiştiğinde düğmenin dolgusunu güncelle
+// Fare düğme üzerinde tıklandığında durumu bir kere değiştir
 void mousePressed() {
-  if (buttonState) {
-    fill(#888a9b); // Kapalı renk
-  } else {
-    fill(#eff2ff); // Açık renk
+  if (mouseX > width/2 - height/4 && mouseX < width/2 + height/4 &&
+      mouseY > height/2 - height/8 && mouseY < height/2 + height/8) {
+    buttonState = !buttonState;
   }
 }

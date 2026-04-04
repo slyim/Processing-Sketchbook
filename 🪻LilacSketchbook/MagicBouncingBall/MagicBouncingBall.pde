@@ -26,9 +26,9 @@ void draw() {
   x += xspd;
   y += yspd;
 
-  // Duvar çarpışması: kenarlara göre yön ters çevir
-  if (x >= width  - 25 || x <= 25) xspd *= -1;
-  if (y >= height - 25 || y <= 25) yspd *= -1;
+  // Duvar çarpışması: kenarlara göre yön ters çevir (ballStroke max 100, yani yarıçap max 50)
+  if (x >= width  - 50 || x <= 50) xspd *= -1;
+  if (y >= height - 50 || y <= 50) yspd *= -1;
 
   // Fare çarpışması: farenin yakınına gelince yön ters çevir
   if (dist(x, y, mouseX, mouseY) < ballStroke / 2) {
@@ -39,8 +39,8 @@ void draw() {
   }
 
   // Topu tuval sınırları içinde tut
-  x = constrain(x, 25, width  - 25);
-  y = constrain(y, 25, height - 25);
+  x = constrain(x, 50, width  - 50);
+  y = constrain(y, 50, height - 50);
 
   circle(x, y, ballStroke); // Dış daire
   circle(x, y, ballEye);    // İç daire

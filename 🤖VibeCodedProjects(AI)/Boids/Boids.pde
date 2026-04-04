@@ -217,7 +217,7 @@ void limitSpeed(int i) {
     vy[i] = vy[i] / spd * MAX_SPEED;
   }
   // Minimum speed so boids don't stall
-  if (spd < 0.8) {
+  if (spd > 0 && spd < 0.8) {
     vx[i] = vx[i] / spd * 0.8;
     vy[i] = vy[i] / spd * 0.8;
   }

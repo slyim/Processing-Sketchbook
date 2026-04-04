@@ -2,7 +2,6 @@
 // Üst ve alt kenarlara arka plan rengiyle ince bant ekler.
 
 int i;
-int numColors = 5; // Degrade kaç renk bölümüne ayrılsın
 color[] gradientColors = { #00ff2a, #ff0000 }; // Başlangıç ve bitiş rengi
 color bgColor = lerpColor(gradientColors[0], gradientColors[1], 0.1); // Bant rengi
 
@@ -13,8 +12,7 @@ void setup() {
 void draw() {
   // Her sütun için ara rengi hesapla ve dikey çizgi çiz
   for (i = 0; i < width; i++) {
-    int gradientMap = i / (width / numColors); // Hangi renk bölümündeyiz?
-    float t = map(gradientMap, 0, numColors - 1, 0, 1); // 0-1 arasına normalize et
+    float t = map(i, 0, width - 1, 0, 1); // Her sütunu 0-1 arasına normalize et
     color gradient = lerpColor(gradientColors[0], gradientColors[1], t);
     stroke(gradient);
     line(i, 0, i, height);
