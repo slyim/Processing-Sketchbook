@@ -7,7 +7,7 @@
 - **`🪻LilacSketchbook`** — Kendi geliştirdiğim kişisel projeler.
 - **`🤖VibeCodedProjects(AI)`** — Yapay zeka desteğiyle geliştirilen deneysel projeler.
 - **`📚ReferenceProcessing(Java)`** — Processing özelliklerini öğrenmek için referans çizimler.
-- **`🌿Sage`** — Arkadaşlarıma ait kodlar.
+- **`🌿Sage`** — Sage'e ait kodlar.
 - **`Pride 🏳️‍⚧️`** — Pride Çizimleri.
 
 ## 📖 Öğrenme
