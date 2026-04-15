@@ -15,6 +15,11 @@
 - Kendi yazdığım kodları son haline geldikten sonra Claude ile dokümentasyon haline getirdim, her bir kod dosyasının ne işe yaradığını içerisindeki yorumlara bakarak öğrenebilirsiniz.
 - `📚ReferenceProcessing(Java)` klasöründe şekiller, renkler, animasyon, etkileşim, OOP, Perlin gürültüsü, tipografi ve 3D gibi temel Processing konularını kapsayan 10 referans çizim bulunmaktadır.
 
+## 🤖 Vibe Coded Highlights
+
+- `VelvetStorm` — İki hareketli fırtına merkezinin oluşturduğu akış alanında parlayan parçacıklar dolaşır.
+- `GlassOrbit` — Fare ile eğilebilen, cam parçaları gibi parlayan 3D orbital bir yapı.
+
 ## ▶️ Nasıl Çalıştırılır?
 
 - Processing kodunu çalıştırmak için sisteminizde **[Processing 4](https://processing.org/download)** kurulu olmalıdır.
