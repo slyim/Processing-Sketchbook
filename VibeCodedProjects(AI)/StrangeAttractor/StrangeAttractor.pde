@@ -54,15 +54,22 @@ void setup() {
 // ─────────────────────────────────────────────
 
 void instantJump() {
-  pa = random(-2.2, 2.2); pb = random(-2.2, 2.2);
-  pc = random(-2.2, 2.2); pd = random(-2.2, 2.2);
-  ta = pa; tb = pb; tc = pc; td = pd;
+  pa = random(-2.2, 2.2);
+  pb = random(-2.2, 2.2);
+  pc = random(-2.2, 2.2);
+  pd = random(-2.2, 2.2);
+  ta = pa;
+  tb = pb;
+  tc = pc;
+  td = pd;
   newTarget();
 }
 
 void newTarget() {
-  ta = random(-2.2, 2.2); tb = random(-2.2, 2.2);
-  tc = random(-2.2, 2.2); td = random(-2.2, 2.2);
+  ta = random(-2.2, 2.2);
+  tb = random(-2.2, 2.2);
+  tc = random(-2.2, 2.2);
+  td = random(-2.2, 2.2);
   morphTimer = (int)random(200, 420);
 }
 
@@ -99,7 +106,9 @@ void draw() {
 
     // Guard against rare escapes in de Jong
     if (Float.isNaN(nx) || abs(nx) > 20) {
-      x = random(-1, 1); y = random(-1, 1); continue;
+      x = random(-1, 1);
+      y = random(-1, 1);
+      continue;
     }
 
     int px = (int)(nx * SCL + OX);
@@ -107,7 +116,8 @@ void draw() {
     if (px >= 0 && px < W && py >= 0 && py < H)
       density[py * W + px]++;
 
-    x = nx; y = ny;
+    x = nx;
+    y = ny;
   }
 
   // Find peak density for log normalisation
@@ -152,7 +162,12 @@ void draw() {
 
 void keyPressed() {
   if (key == ' ' || key == 'r' || key == 'R') newTarget();
-  if (key == TAB) { formula = (formula + 1) % 2; instantJump(); }
+  if (key == TAB) {
+    formula = (formula + 1) % 2;
+    instantJump();
+  }
 }
 
-void mousePressed() { instantJump(); }
+void mousePressed() {
+  instantJump();
+}
