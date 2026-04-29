@@ -9,7 +9,6 @@ boolean coinisF;
 
 // immutable olarak yaptim cunku zaten veriler degismeyecek.
 // veriler ekrana da text olarak yazilacak bu yuzden anlamlilar.
-final String[] STATES ={"IDLE", "COUNTDOWN", "RESULT"};
 // state will help me cycle through states
 
 
